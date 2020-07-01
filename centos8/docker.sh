@@ -13,4 +13,4 @@ curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compos
 chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 
-docker run -d -p 80:80 nginx
+docker run -d -p 80:80 -v /git/docker-trainning/html:/usr/share/nginx/html nginx
