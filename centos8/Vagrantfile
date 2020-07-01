@@ -68,7 +68,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: <<-SHELL
     source /vagrant/selinux.sh
     dnf -y update
-    dnf -y install kernel-devel gcc make zip unzip wget
+    dnf -y install kernel-devel gcc make zip unzip wget curl
     . /vagrant/docker.sh
   SHELL
 end
