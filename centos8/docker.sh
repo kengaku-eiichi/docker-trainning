@@ -13,8 +13,8 @@ curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compos
 chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 
-docker run -d -p 80:80 --rm -v /git/docker-trainning/html:/usr/share/nginx/html -v /git/docker-trainning/log:/var/log nginx:1.19
+cd /git/docker-trainning
+docker-compose up -d
+
 # docker exec -it xxx /bin/bash
 
-# docker build -t trainning/nginx /git/docker-trainning
-# docker run -d -p 80:80 --rm -v /git/docker-trainning/log:/var/log trainning/nginx
