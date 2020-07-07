@@ -2,8 +2,6 @@ version: '3'
 services:
     php-fpm:
         build: ./php-fpm
-        links:
-            - mysql
         environment:
             - MYSQL_SOCKET:/var/run/mysqld/mysqld.sock
         volumes:
@@ -16,8 +14,6 @@ services:
         build: ./nginx
         ports:
             - 8080:80
-        links:
-            - php-fpm
         volumes:
             - ./src/html:/var/www/html
             - ./nginx/conf/default.conf:/etc/nginx/conf.d/default.conf
